@@ -16,7 +16,7 @@ namespace MovieNiteApp.Models.Films
         public int ImdbId { get; set; }
 
         [JsonProperty("imdb_title_id")]
-        public int ImdbTitleId { get; set; }
+        public string ImdbTitleId { get; set; }
 
         [JsonProperty("film_name")]
         public string FilmName { get; set; }
