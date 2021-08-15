@@ -8,7 +8,7 @@ namespace MovieNiteApp.Models.Films
 {
     public class FilmShowtime
     {
-        [JsonProperty("films")]
+        [JsonProperty("film")]
         public FilmShowtimeDetail FilmDetail { get; set; }
 
         [JsonProperty("cinemas")]

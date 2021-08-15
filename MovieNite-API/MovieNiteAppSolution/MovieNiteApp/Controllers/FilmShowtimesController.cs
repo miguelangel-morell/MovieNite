@@ -15,13 +15,15 @@ namespace MovieNiteApp.Controllers
     public class FilmShowtimesController : ApiController
     {
         [HttpGet]
-        public async Task<FilmShowtime> GetFilmShowtimes() 
+        public async Task<FilmShowtime> GetFilmShowtimes(int id, string lat, string lng) 
         {
-            string geoloaction = "33.4735;-81.966667";
-            string deviceDateTime = "2021-06-22T23:04:07.795Z";
-            
-            HttpClient client = MovieClientHelper.AddMovieHeaders(geoloaction,deviceDateTime);
-            HttpResponseMessage response = await client.GetAsync("filmShowTimes" + "/?film_id=226644" + "&date=2021-06-24" + "&n=10");
+            string geolocation = "-22.0;14.0";
+            string deviceDateTime = DateTime.UtcNow.ToString("yyyy-MM-ddTHH:mm:sssZ");
+            string date = DateTime.UtcNow.ToString("yyyy-MM-dd");
+
+            //HttpClient client = MovieClientHelper.AddMovieHeaders(lat + ";" + lng,deviceDateTime);
+            HttpClient client = MovieClientHelper.AddMovieHeaders(geolocation, deviceDateTime);
+            HttpResponseMessage response = await client.GetAsync("filmShowTimes" + "/?film_id=" + id + "&date=" + date + "&n=10");
             response.EnsureSuccessStatusCode();
             string responseString = await response.Content.ReadAsStringAsync();
             FilmShowtime filmShowtime = JsonConvert.DeserializeObject<FilmShowtime>(responseString);

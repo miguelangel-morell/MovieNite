@@ -14,12 +14,13 @@ namespace MovieNiteApp.Controllers
     public class CinemasController : ApiController
     {
         [HttpGet]
-        public async Task<CinemasNearby> GetCinemasNearby()
+        public async Task<CinemasNearby> GetCinemasNearby(string lat,string lng)
         {
-            string geoloaction = "33.4735;-81.966667";
-            string deviceDateTime = "2021-06-23T22:52:52.736Z";
-
-            HttpClient client = MovieClientHelper.AddMovieHeaders(geoloaction, deviceDateTime);
+           
+            string deviceDateTime = DateTime.UtcNow.ToString("yyyy-MM-ddTHH:mm:sssZ");
+            string geolocation = "-22.0;14.0";
+            //HttpClient client = MovieClientHelper.AddMovieHeaders(lat + ";" + lng, deviceDateTime);
+            HttpClient client = MovieClientHelper.AddMovieHeaders(geolocation, deviceDateTime);
             HttpResponseMessage response = await client.GetAsync("cinemasNearby" + "/" + "?n=5");
             response.EnsureSuccessStatusCode();
             string responseString = await response.Content.ReadAsStringAsync();

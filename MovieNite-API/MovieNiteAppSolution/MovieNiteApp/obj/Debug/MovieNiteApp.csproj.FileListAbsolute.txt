@@ -101,3 +101,6 @@ C:\Users\Miggz\dev\MovieNiteRepo\MovieNite\MovieNite-API\MovieNiteAppSolution\Mo
 C:\Users\Miggz\dev\MovieNiteRepo\MovieNite\MovieNite-API\MovieNiteAppSolution\MovieNiteApp\bin\System.Text.Json.xml
 C:\Users\Miggz\dev\MovieNiteRepo\MovieNite\MovieNite-API\MovieNiteAppSolution\MovieNiteApp\bin\System.Threading.Tasks.Extensions.xml
 C:\Users\Miggz\dev\MovieNiteRepo\MovieNite\MovieNite-API\MovieNiteAppSolution\MovieNiteApp\bin\System.ValueTuple.xml
+C:\Users\Miggz\dev\MovieNiteRepo\MovieNite\MovieNite-API\MovieNiteAppSolution\MovieNiteApp\bin\System.Web.Cors.dll
+C:\Users\Miggz\dev\MovieNiteRepo\MovieNite\MovieNite-API\MovieNiteAppSolution\MovieNiteApp\bin\System.Web.Http.Cors.dll
+C:\Users\Miggz\dev\MovieNiteRepo\MovieNite\MovieNite-API\MovieNiteAppSolution\MovieNiteApp\bin\System.Web.Http.Cors.xml
